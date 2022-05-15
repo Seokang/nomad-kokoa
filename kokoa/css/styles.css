@@ -6,6 +6,7 @@
 @import "screens/components/status-bar.css";
 @import "screens/components/nav-bar.css";
 @import "screens/components/screen-header.css";
+@import "screens/components/user-component.css";
 /* Screens */
 @import "screens/login.css";
 @import "screens/friends.css";
