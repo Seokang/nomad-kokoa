@@ -4,6 +4,27 @@
     <meta charset="UTF-8" />
     <title>Title</title>
     <style>
+      @keyframes dotAnimation {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(180deg);
+        }
+        100% {
+          transform: rotate(180deg);
+        }
+      }
+
+      @keyframes squareAnimation {
+        40% {
+          transform: scaleY(2);
+        }
+        80% {
+          transform: scaleY(1);
+        }
+      }
+
       body {
         background-color: #6bbcbe;
         display: flex;
@@ -22,64 +43,24 @@
 
       .main-items {
         display: flex;
-
+        justify-content: space-between;
         align-items: center;
         width: 100%;
         height: 50%;
       }
 
       .main-items__dots {
-        justify-content: center;
-      }
-      .main-items__square {
-        justify-content: space-around;
+        animation: dotAnimation 1s ease-in-out infinite;
       }
 
       .main-item {
         background-color: white;
       }
 
-      @keyframes dotLeftAnimation {
-        50% {
-          transform: translateX(30px) translateY(-30px);
-        }
-        100% {
-          transform: translateX(60px);
-        }
-      }
-
-      @keyframes dotRightAnimation {
-        50% {
-          transform: translateX(-30px) translateY(30px);
-        }
-        100% {
-          transform: translateX(-60px);
-        }
-      }
-
       .main-dot {
         width: 10px;
         height: 10px;
         border-radius: 50%;
-      }
-
-      .main-dot:nth-child(1) {
-        animation: dotLeftAnimation 1s linear infinite;
-      }
-      .main-dot:nth-child(2) {
-        margin: 0 20px;
-      }
-      .main-dot:nth-child(3) {
-        animation: dotRightAnimation 1s linear infinite;
-      }
-
-      @keyframes squareAnimation {
-        40% {
-          transform: scaleY(2);
-        }
-        80% {
-          transform: scaleY(1);
-        }
       }
 
       .main-square {
