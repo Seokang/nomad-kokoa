@@ -1,1 +1,0 @@
-# Nomad Kokoa clone
